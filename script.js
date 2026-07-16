@@ -97,3 +97,38 @@ if (audienceMap) {
 
   updateCenter(null);
 }
+
+const teamShowcase = document.querySelector("[data-team-showcase]");
+
+if (teamShowcase) {
+  const thumbs = [...teamShowcase.querySelectorAll("[data-team-thumb]")];
+  const count = teamShowcase.querySelector("[data-team-count]");
+  const name = teamShowcase.querySelector("[data-team-name]");
+  const role = teamShowcase.querySelector("[data-team-role]");
+  const description = teamShowcase.querySelector("[data-team-description]");
+  const photoFrame = teamShowcase.querySelector(".team-main-photo");
+
+  const setActiveMember = (thumb) => {
+    teamShowcase.classList.add("is-switching");
+
+    window.setTimeout(() => {
+      thumbs.forEach((item) => {
+        const isActive = item === thumb;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+      });
+
+      if (count) count.textContent = `#${thumb.dataset.index}`;
+      if (name) name.textContent = thumb.dataset.name;
+      if (role) role.textContent = thumb.dataset.role;
+      if (description) description.textContent = thumb.dataset.description;
+      if (photoFrame) photoFrame.dataset.teamPhotoLabel = thumb.dataset.name;
+
+      teamShowcase.classList.remove("is-switching");
+    }, 140);
+  };
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => setActiveMember(thumb));
+  });
+}
