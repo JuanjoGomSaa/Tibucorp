@@ -3,8 +3,318 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="../">
+  <meta name="description" content="Servicios de TIBUCORP: revisoría fiscal, asesoría tributaria, outsourcing contable, auditoría financiera, asesoría legal empresarial y back office administrativo.">
   <title>Servicios | TIBUCORP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/servicios/revisoria-fiscal.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="services/services.css">
 </head>
-<body>
+<body class="services-page">
+  <header class="site-header is-scrolled">
+    <a class="brand" href="index.html#inicio" aria-label="TIBUCORP inicio">
+      <span class="brand-mark">T</span>
+      <span>
+        <strong>TIBUCORP</strong>
+        <small>Legal · Contable · Tributario</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#para-quien">Nosotros</a>
+      <a href="index.html#equipo">Equipo</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+    <a class="header-cta" href="https://wa.me/573165549451?text=Hola%20TIBUCORP%2C%20quiero%20recibir%20asesor%C3%ADa%20para%20mi%20empresa." target="_blank" rel="noopener noreferrer">
+      Hablar por WhatsApp
+    </a>
+  </header>
+
+  <main>
+    <section class="services-slider" data-services-slider aria-label="Servicios principales de TIBUCORP">
+      <div class="services-slider-shell">
+        <div class="service-slide-copy">
+          <span class="service-kicker" data-slide-counter>01 / 06</span>
+          <h1 data-slide-title>Revisoría fiscal</h1>
+          <p data-slide-description>Cumplimiento normativo, revisión independiente, control interno y acompañamiento permanente para fortalecer la gestión empresarial.</p>
+
+          <div class="slide-actions">
+            <a class="slide-btn slide-btn-primary" data-slide-whatsapp href="https://wa.me/573165549451?text=Hola%2C%20estoy%20interesado%20en%20el%20servicio%20de%20Revisor%C3%ADa%20fiscal." target="_blank" rel="noopener noreferrer">
+              Consultar por WhatsApp
+            </a>
+            <button class="slide-btn slide-btn-secondary" type="button" data-slide-details>
+              Ver información completa
+            </button>
+          </div>
+        </div>
+
+        <figure class="service-slide-media">
+          <img data-slide-image src="img/servicios/revisoria-fiscal.png" alt="Revisoría fiscal" width="920" height="760">
+        </figure>
+
+        <div class="slider-controls" aria-label="Controles del slider">
+          <div class="slider-arrows">
+            <button type="button" class="slider-arrow" data-slide-prev aria-label="Servicio anterior">‹</button>
+            <button type="button" class="slider-arrow" data-slide-next aria-label="Servicio siguiente">›</button>
+          </div>
+
+          <div class="slider-progress" aria-hidden="true">
+            <span data-slide-progress></span>
+          </div>
+
+          <div class="slider-tabs" role="tablist" aria-label="Seleccionar servicio">
+            <button type="button" class="slider-tab is-active" data-slide-dot data-index="0" aria-label="Ver Revisoría fiscal">RF</button>
+            <button type="button" class="slider-tab" data-slide-dot data-index="1" aria-label="Ver Asesoría tributaria">AT</button>
+            <button type="button" class="slider-tab" data-slide-dot data-index="2" aria-label="Ver Outsourcing contable">OC</button>
+            <button type="button" class="slider-tab" data-slide-dot data-index="3" aria-label="Ver Auditoría financiera">AF</button>
+            <button type="button" class="slider-tab" data-slide-dot data-index="4" aria-label="Ver Asesoría legal empresarial">AL</button>
+            <button type="button" class="slider-tab" data-slide-dot data-index="5" aria-label="Ver Back office administrativo">BO</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-detail-intro" id="servicios-detalle">
+      <span class="eyebrow">Servicios en detalle</span>
+      <h2>Conozca cómo podemos acompañar su empresa</h2>
+      <p>Explore cada servicio, sus beneficios, el tipo de empresas a las que está dirigido y la forma en que TIBUCORP puede acompañar sus procesos.</p>
+    </section>
+
+    <section class="service-accordion-section" aria-label="Información detallada de servicios">
+      <div class="service-accordion-list">
+        <article class="service-accordion is-open" id="revisoria-fiscal">
+          <button class="service-accordion-header" type="button" aria-expanded="true" aria-controls="panel-revisoria-fiscal">
+            <span class="accordion-number">01</span>
+            <span>
+              <strong>Revisoría fiscal</strong>
+              <small>Cumplimiento normativo, control y acompañamiento independiente.</small>
+            </span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="service-accordion-panel" id="panel-revisoria-fiscal">
+            <div class="service-accordion-content">
+              <div class="detail-block">
+                <h3>Qué es</h3>
+                <p>Servicio de vigilancia y control independiente que verifica el cumplimiento legal, tributario, contable y financiero de la organización.</p>
+              </div>
+              <div class="detail-block">
+                <h3>Para quién es</h3>
+                <ul>
+                  <li>Empresas obligadas legalmente a tener revisor fiscal</li>
+                  <li>Organizaciones que buscan fortalecer su control interno</li>
+                  <li>Empresas familiares en proceso de crecimiento</li>
+                  <li>Compañías que requieren mayor transparencia en sus reportes</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h3>Qué problemas resuelve</h3>
+                <ul>
+                  <li>Incumplimientos normativos</li>
+                  <li>Debilidades de control interno</li>
+                  <li>Errores en reportes financieros</li>
+                  <li>Riesgos tributarios y contables</li>
+                  <li>Falta de seguimiento independiente</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h3>Qué incluye</h3>
+                <ul>
+                  <li>Revisión de estados financieros</li>
+                  <li>Evaluación del control interno</li>
+                  <li>Seguimiento de obligaciones legales y tributarias</li>
+                  <li>Informes y recomendaciones</li>
+                  <li>Acompañamiento a órganos de administración</li>
+                  <li>Identificación preventiva de riesgos</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h3>Beneficios</h3>
+                <ul>
+                  <li>Mayor confianza en la información financiera</li>
+                  <li>Prevención de sanciones</li>
+                  <li>Mejor control empresarial</li>
+                  <li>Soporte técnico para la toma de decisiones</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h3>Cómo trabajamos</h3>
+                <p>Diagnóstico inicial, revisión periódica, emisión de informes, seguimiento de hallazgos y acompañamiento permanente.</p>
+                <a class="accordion-cta" href="https://wa.me/573165549451?text=Hola%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20el%20servicio%20de%20Revisor%C3%ADa%20fiscal." target="_blank" rel="noopener noreferrer">Consultar revisoría fiscal por WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-accordion" id="asesoria-tributaria">
+          <button class="service-accordion-header" type="button" aria-expanded="false" aria-controls="panel-asesoria-tributaria">
+            <span class="accordion-number">02</span>
+            <span>
+              <strong>Asesoría tributaria</strong>
+              <small>Planeación, prevención de riesgos fiscales y cumplimiento tributario.</small>
+            </span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="service-accordion-panel" id="panel-asesoria-tributaria">
+            <div class="service-accordion-content">
+              <div class="detail-block"><h3>Qué es</h3><p>Acompañamiento especializado para planear, revisar y gestionar correctamente las obligaciones tributarias de la empresa.</p></div>
+              <div class="detail-block"><h3>Para quién es</h3><ul><li>Empresas con obligaciones tributarias complejas</li><li>Organizaciones en crecimiento</li><li>Negocios que quieren prevenir contingencias fiscales</li><li>Empresas que enfrentan requerimientos de entidades tributarias</li></ul></div>
+              <div class="detail-block"><h3>Qué problemas resuelve</h3><ul><li>Errores en declaraciones</li><li>Falta de planeación tributaria</li><li>Riesgo de sanciones</li><li>Desconocimiento de obligaciones</li><li>Respuestas inadecuadas ante entidades de control</li></ul></div>
+              <div class="detail-block"><h3>Qué incluye</h3><ul><li>Planeación tributaria</li><li>Revisión de declaraciones</li><li>Diagnóstico de riesgos fiscales</li><li>Acompañamiento ante requerimientos</li><li>Análisis de obligaciones nacionales y territoriales</li><li>Recomendaciones preventivas</li></ul></div>
+              <div class="detail-block"><h3>Beneficios</h3><ul><li>Reducción de contingencias</li><li>Mejor planeación financiera</li><li>Cumplimiento oportuno</li><li>Mayor claridad para la toma de decisiones</li></ul></div>
+              <div class="detail-block"><h3>Cómo trabajamos</h3><p>Revisión de la situación fiscal, identificación de riesgos, definición de acciones y acompañamiento continuo.</p><a class="accordion-cta" href="https://wa.me/573165549451?text=Hola%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20el%20servicio%20de%20Asesor%C3%ADa%20tributaria." target="_blank" rel="noopener noreferrer">Consultar asesoría tributaria por WhatsApp</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-accordion" id="outsourcing-contable">
+          <button class="service-accordion-header" type="button" aria-expanded="false" aria-controls="panel-outsourcing-contable">
+            <span class="accordion-number">03</span>
+            <span>
+              <strong>Outsourcing contable</strong>
+              <small>Información financiera organizada, confiable y actualizada.</small>
+            </span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="service-accordion-panel" id="panel-outsourcing-contable">
+            <div class="service-accordion-content">
+              <div class="detail-block"><h3>Qué es</h3><p>Gestión integral o parcial de los procesos contables para mantener información financiera organizada, confiable y actualizada.</p></div>
+              <div class="detail-block"><h3>Para quién es</h3><ul><li>Pymes</li><li>Empresas en crecimiento</li><li>Negocios sin un departamento contable completo</li><li>Organizaciones que quieren optimizar sus procesos internos</li></ul></div>
+              <div class="detail-block"><h3>Qué problemas resuelve</h3><ul><li>Contabilidad atrasada</li><li>Información desorganizada</li><li>Falta de reportes oportunos</li><li>Sobrecarga administrativa</li><li>Debilidades en cierres contables</li></ul></div>
+              <div class="detail-block"><h3>Qué incluye</h3><ul><li>Registro y procesamiento contable</li><li>Conciliaciones</li><li>Cierres mensuales</li><li>Preparación de reportes financieros</li><li>Seguimiento de cuentas</li><li>Acompañamiento en obligaciones relacionadas</li></ul></div>
+              <div class="detail-block"><h3>Beneficios</h3><ul><li>Información actualizada</li><li>Menor carga operativa</li><li>Mejor control financiero</li><li>Decisiones basadas en datos confiables</li></ul></div>
+              <div class="detail-block"><h3>Cómo trabajamos</h3><p>Levantamiento de información, organización del proceso, ejecución periódica y entrega de reportes.</p><a class="accordion-cta" href="https://wa.me/573165549451?text=Hola%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20el%20servicio%20de%20Outsourcing%20contable." target="_blank" rel="noopener noreferrer">Consultar outsourcing contable por WhatsApp</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-accordion" id="auditoria-financiera">
+          <button class="service-accordion-header" type="button" aria-expanded="false" aria-controls="panel-auditoria-financiera">
+            <span class="accordion-number">04</span>
+            <span>
+              <strong>Auditoría financiera</strong>
+              <small>Evaluación de procesos, estados financieros, riesgos y oportunidades.</small>
+            </span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="service-accordion-panel" id="panel-auditoria-financiera">
+            <div class="service-accordion-content">
+              <div class="detail-block"><h3>Qué es</h3><p>Evaluación independiente de procesos, cifras y controles para determinar la confiabilidad de la información financiera y detectar oportunidades de mejora.</p></div>
+              <div class="detail-block"><h3>Para quién es</h3><ul><li>Empresas que buscan validar sus estados financieros</li><li>Organizaciones con riesgos de control</li><li>Compañías en procesos de inversión o negociación</li><li>Empresas que necesitan revisar procesos específicos</li></ul></div>
+              <div class="detail-block"><h3>Qué problemas resuelve</h3><ul><li>Información financiera poco confiable</li><li>Procesos débiles</li><li>Errores materiales</li><li>Riesgos no identificados</li><li>Falta de evidencia para decisiones estratégicas</li></ul></div>
+              <div class="detail-block"><h3>Qué incluye</h3><ul><li>Planeación de auditoría</li><li>Revisión de estados financieros</li><li>Pruebas y validaciones</li><li>Evaluación de controles</li><li>Identificación de hallazgos</li><li>Informe de recomendaciones</li></ul></div>
+              <div class="detail-block"><h3>Beneficios</h3><ul><li>Mayor confiabilidad</li><li>Identificación temprana de riesgos</li><li>Mejora de procesos</li><li>Soporte para decisiones estratégicas</li></ul></div>
+              <div class="detail-block"><h3>Cómo trabajamos</h3><p>Definición de alcance, levantamiento de información, pruebas, análisis de resultados e informe final.</p><a class="accordion-cta" href="https://wa.me/573165549451?text=Hola%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20el%20servicio%20de%20Auditor%C3%ADa%20financiera." target="_blank" rel="noopener noreferrer">Consultar auditoría financiera por WhatsApp</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-accordion" id="asesoria-legal">
+          <button class="service-accordion-header" type="button" aria-expanded="false" aria-controls="panel-asesoria-legal">
+            <span class="accordion-number">05</span>
+            <span>
+              <strong>Asesoría legal empresarial</strong>
+              <small>Soporte jurídico preventivo para empresas y grupos familiares.</small>
+            </span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="service-accordion-panel" id="panel-asesoria-legal">
+            <div class="service-accordion-content">
+              <div class="detail-block"><h3>Qué es</h3><p>Acompañamiento jurídico preventivo y estratégico para apoyar la operación, el crecimiento y la continuidad de la empresa.</p></div>
+              <div class="detail-block"><h3>Para quién es</h3><ul><li>Empresas familiares</li><li>Pymes</li><li>Sociedades en crecimiento</li><li>Organizaciones que requieren soporte jurídico permanente</li><li>Empresas en procesos de sucesión o reorganización</li></ul></div>
+              <div class="detail-block"><h3>Qué problemas resuelve</h3><ul><li>Contratos débiles</li><li>Riesgos societarios</li><li>Conflictos entre socios</li><li>Falta de gobierno corporativo</li><li>Procesos de sucesión sin planificación</li></ul></div>
+              <div class="detail-block"><h3>Qué incluye</h3><ul><li>Revisión y elaboración de contratos</li><li>Asesoría societaria</li><li>Gobierno corporativo</li><li>Acompañamiento a juntas y asambleas</li><li>Planeación patrimonial y sucesoral</li><li>Conceptos jurídicos empresariales</li></ul></div>
+              <div class="detail-block"><h3>Beneficios</h3><ul><li>Prevención de conflictos</li><li>Mayor seguridad jurídica</li><li>Reglas claras entre socios</li><li>Continuidad empresarial</li><li>Mejor toma de decisiones</li></ul></div>
+              <div class="detail-block"><h3>Cómo trabajamos</h3><p>Diagnóstico jurídico, identificación de riesgos, diseño de acciones y acompañamiento según la necesidad de la empresa.</p><a class="accordion-cta" href="https://wa.me/573165549451?text=Hola%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20el%20servicio%20de%20Asesor%C3%ADa%20legal%20empresarial." target="_blank" rel="noopener noreferrer">Consultar asesoría legal empresarial por WhatsApp</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-accordion" id="back-office">
+          <button class="service-accordion-header" type="button" aria-expanded="false" aria-controls="panel-back-office">
+            <span class="accordion-number">06</span>
+            <span>
+              <strong>Back office administrativo</strong>
+              <small>Apoyo operativo para ordenar procesos y mejorar el control del negocio.</small>
+            </span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="service-accordion-panel" id="panel-back-office">
+            <div class="service-accordion-content">
+              <div class="detail-block"><h3>Qué es</h3><p>Apoyo operativo y administrativo para organizar tareas internas, mejorar procesos y permitir que la empresa se concentre en su actividad principal.</p></div>
+              <div class="detail-block"><h3>Para quién es</h3><ul><li>Pymes con alta carga administrativa</li><li>Empresas en crecimiento</li><li>Organizaciones con procesos internos desordenados</li><li>Negocios que necesitan apoyo sin ampliar su estructura fija</li></ul></div>
+              <div class="detail-block"><h3>Qué problemas resuelve</h3><ul><li>Sobrecarga operativa</li><li>Falta de seguimiento</li><li>Procesos administrativos informales</li><li>Información dispersa</li><li>Pérdida de tiempo en tareas repetitivas</li></ul></div>
+              <div class="detail-block"><h3>Qué incluye</h3><ul><li>Organización documental</li><li>Seguimiento administrativo</li><li>Apoyo en reportes y controles</li><li>Coordinación de tareas internas</li><li>Estandarización de procesos</li><li>Apoyo a áreas contables, financieras y administrativas</li></ul></div>
+              <div class="detail-block"><h3>Beneficios</h3><ul><li>Mayor eficiencia</li><li>Menor carga interna</li><li>Procesos más ordenados</li><li>Mejor seguimiento</li><li>Mayor enfoque en el negocio principal</li></ul></div>
+              <div class="detail-block"><h3>Cómo trabajamos</h3><p>Diagnóstico de tareas, definición de responsabilidades, implementación de controles y seguimiento continuo.</p><a class="accordion-cta" href="https://wa.me/573165549451?text=Hola%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20el%20servicio%20de%20Back%20office%20administrativo." target="_blank" rel="noopener noreferrer">Consultar back office administrativo por WhatsApp</a></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="services-final-cta">
+      <div>
+        <h2>¿No sabe cuál servicio necesita?</h2>
+        <p>Cuéntenos la situación de su empresa y le ayudaremos a identificar el acompañamiento más adecuado.</p>
+      </div>
+      <a href="https://wa.me/573165549451?text=Hola%20TIBUCORP%2C%20quiero%20saber%20qu%C3%A9%20servicio%20necesita%20mi%20empresa." target="_blank" rel="noopener noreferrer">Hablar con un asesor por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand inverted" href="index.html#inicio" aria-label="TIBUCORP inicio">
+          <span class="brand-mark">T</span>
+          <span>
+            <strong>TIBUCORP S.A.S</strong>
+            <small>Legal · Contable · Tributario</small>
+          </span>
+        </a>
+        <p>Acompañamos empresas en cumplimiento, control y toma de decisiones.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Contacto</h2>
+        <a href="https://wa.me/573165549451" target="_blank" rel="noopener noreferrer">+57 316 5549451</a>
+        <a href="tel:+576018844986">(601) 8844986</a>
+        <a href="mailto:gerencia@tribucorp.com">gerencia@tribucorp.com</a>
+      </div>
+
+      <div class="footer-column">
+        <h2>Ubicación</h2>
+        <p>Av Pradilla 90 0 Este Lc 2001</p>
+        <p>Centro Comercial Centro Chía</p>
+        <p>Chía, Cundinamarca</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Enlaces</h2>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#para-quien">Nosotros</a>
+        <a href="index.html#equipo">Equipo</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <p>© 2026 TIBUCORP S.A.S · Revisoría fiscal · Asesoría legal, contable y tributaria</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="services/services.js"></script>
 </body>
 </html>
