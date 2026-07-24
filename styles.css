@@ -3341,3 +3341,55 @@ button:focus-visible {
     height: 64px;
   }
 }
+
+/* Taller team portrait composition */
+.team-main-photo {
+  width: min(380px, 100%);
+  aspect-ratio: 4 / 4.35;
+}
+
+.team-thumbs {
+  width: min(340px, 94%);
+  margin-top: 16px;
+}
+
+.team-thumb,
+.team-thumb img {
+  width: 76px;
+}
+
+.team-thumb img {
+  height: 82px;
+}
+
+@media (max-width: 1100px) {
+  .team-main-photo {
+    width: min(340px, 100%);
+    aspect-ratio: 4 / 4.05;
+  }
+
+  .team-thumbs {
+    width: min(310px, 94%);
+  }
+}
+
+@media (max-width: 767px) {
+  .team-main-photo {
+    max-width: 290px;
+    aspect-ratio: 4 / 3.75;
+  }
+
+  .team-thumbs {
+    width: min(270px, 100%);
+    margin-top: 12px;
+  }
+
+  .team-thumb,
+  .team-thumb img {
+    width: 64px;
+  }
+
+  .team-thumb img {
+    height: 68px;
+  }
+}
