@@ -2884,11 +2884,12 @@ button:focus-visible {
 }
 
 .audience-center strong {
-  font-size: clamp(21px, 2vw, 28px);
+  font-size: clamp(20px, 1.7vw, 25px);
 }
 
 .audience-center p {
   font-size: 14px;
+  max-width: 150px;
 }
 
 .audience-item {

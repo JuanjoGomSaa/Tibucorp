@@ -43,8 +43,8 @@ if (audienceMap) {
     const content = card
       ? {
           key: card.dataset.audienceKey,
-          title: card.dataset.title,
-          description: card.dataset.description,
+          title: card.dataset.centerTitle || card.dataset.title,
+          description: card.dataset.centerDescription || card.dataset.description,
         }
       : defaultContent;
 
