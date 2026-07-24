@@ -3296,3 +3296,48 @@ button:focus-visible {
     height: 72px;
   }
 }
+
+/* Keep team selector below the main portrait */
+.team-thumbs {
+  width: min(292px, 94%);
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 34px rgba(6, 40, 70, 0.1);
+}
+
+.team-thumb {
+  gap: 6px;
+}
+
+.team-thumb,
+.team-thumb img {
+  width: 68px;
+}
+
+.team-thumb img {
+  height: 70px;
+}
+
+.team-thumb > span:not(.thumb-avatar) {
+  font-size: 11px;
+}
+
+@media (max-width: 767px) {
+  .team-thumbs {
+    width: min(248px, 100%);
+    margin-top: 12px;
+    padding: 8px 0 2px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .team-thumb,
+  .team-thumb img {
+    width: 60px;
+  }
+
+  .team-thumb img {
+    height: 64px;
+  }
+}
