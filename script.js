@@ -107,6 +107,7 @@ if (teamShowcase) {
   const role = teamShowcase.querySelector("[data-team-role]");
   const description = teamShowcase.querySelector("[data-team-description]");
   const photoFrame = teamShowcase.querySelector(".team-main-photo");
+  const photo = teamShowcase.querySelector("[data-team-image]");
 
   const setActiveMember = (thumb) => {
     teamShowcase.classList.add("is-switching");
@@ -123,6 +124,10 @@ if (teamShowcase) {
       if (role) role.textContent = thumb.dataset.role;
       if (description) description.textContent = thumb.dataset.description;
       if (photoFrame) photoFrame.dataset.teamPhotoLabel = thumb.dataset.name;
+      if (photo && thumb.dataset.image) {
+        photo.src = thumb.dataset.image;
+        photo.alt = thumb.dataset.name;
+      }
 
       teamShowcase.classList.remove("is-switching");
     }, 140);
