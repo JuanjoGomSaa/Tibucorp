@@ -4,6 +4,19 @@
 
 .services-page .site-header {
   position: sticky;
+  transition:
+    transform 220ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+  will-change: transform;
+}
+
+.services-page .site-header.is-hidden {
+  transform: translateY(-110%);
+}
+
+.services-page .site-header.nav-open {
+  transform: translateY(0);
 }
 
 .services-slider {

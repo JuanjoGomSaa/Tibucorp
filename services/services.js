@@ -52,6 +52,24 @@ const services = [
 const whatsappNumber = "573165549451";
 const slider = document.querySelector("[data-services-slider]");
 const accordions = [...document.querySelectorAll(".service-accordion")];
+const servicesHeader = document.querySelector(".services-page .site-header");
+
+if (servicesHeader) {
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY;
+      const shouldHide = isScrollingDown && currentScrollY > 90 && !servicesHeader.classList.contains("nav-open");
+
+      servicesHeader.classList.toggle("is-hidden", shouldHide);
+      lastScrollY = currentScrollY;
+    },
+    { passive: true },
+  );
+}
 
 const makeWhatsappUrl = (name, detailed = false) => {
   const message = detailed
