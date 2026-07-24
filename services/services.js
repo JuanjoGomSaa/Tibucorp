@@ -5,7 +5,7 @@ const services = [
     name: "Revisoría fiscal",
     description:
       "Cumplimiento normativo, revisión independiente, control interno y acompañamiento permanente para fortalecer la gestión empresarial.",
-    image: "img/servicios/revisoria-fiscal.png",
+    benefits: ["Mayor confianza financiera", "Prevención de sanciones", "Mejor control empresarial"],
   },
   {
     slug: "asesoria-tributaria",
@@ -13,7 +13,7 @@ const services = [
     name: "Asesoría tributaria",
     description:
       "Planeación, prevención de riesgos fiscales y acompañamiento frente a obligaciones tributarias y entidades de control.",
-    image: "img/servicios/asesoria-tributaria.png",
+    benefits: ["Reducción de contingencias", "Cumplimiento oportuno", "Mejor planeación financiera"],
   },
   {
     slug: "outsourcing-contable",
@@ -21,7 +21,7 @@ const services = [
     name: "Outsourcing contable",
     description:
       "Gestión contable organizada para tomar decisiones con información clara, actualizada y oportuna.",
-    image: "img/servicios/outsourcing-contable.png",
+    benefits: ["Información actualizada", "Menor carga operativa", "Decisiones con datos confiables"],
   },
   {
     slug: "auditoria-financiera",
@@ -29,7 +29,7 @@ const services = [
     name: "Auditoría financiera",
     description:
       "Evaluación de procesos, estados financieros, riesgos y oportunidades de mejora para fortalecer el control empresarial.",
-    image: "img/servicios/auditoria-financiera.png",
+    benefits: ["Mayor confiabilidad", "Riesgos detectados a tiempo", "Mejora de procesos"],
   },
   {
     slug: "asesoria-legal",
@@ -37,7 +37,7 @@ const services = [
     name: "Asesoría legal empresarial",
     description:
       "Soporte jurídico para empresas, grupos familiares, direccionamiento corporativo y sucesión patrimonial.",
-    image: "img/servicios/asesoria-legal.png",
+    benefits: ["Seguridad jurídica", "Prevención de conflictos", "Continuidad empresarial"],
   },
   {
     slug: "back-office",
@@ -45,7 +45,7 @@ const services = [
     name: "Back office administrativo",
     description:
       "Apoyo operativo y administrativo para liberar carga interna, ordenar procesos y mejorar el control del negocio.",
-    image: "img/servicios/back-office.png",
+    benefits: ["Procesos más ordenados", "Menor carga interna", "Mejor seguimiento"],
   },
 ];
 
@@ -98,7 +98,7 @@ accordions.forEach((accordion) => {
 if (slider) {
   const title = slider.querySelector("[data-slide-title]");
   const description = slider.querySelector("[data-slide-description]");
-  const image = slider.querySelector("[data-slide-image]");
+  const benefits = slider.querySelector("[data-slide-benefits]");
   const counter = slider.querySelector("[data-slide-counter]");
   const progress = slider.querySelector("[data-slide-progress]");
   const whatsapp = slider.querySelector("[data-slide-whatsapp]");
@@ -122,10 +122,8 @@ if (slider) {
       if (counter) counter.textContent = `${String(nextIndex + 1).padStart(2, "0")} / 06`;
       if (progress) progress.style.width = `${((nextIndex + 1) / services.length) * 100}%`;
       if (whatsapp) whatsapp.href = makeWhatsappUrl(service.name);
-      if (image) {
-        image.src = service.image;
-        image.alt = service.name;
-        image.loading = nextIndex === 0 ? "eager" : "lazy";
+      if (benefits) {
+        benefits.innerHTML = service.benefits.map((benefit) => `<li>${benefit}</li>`).join("");
       }
 
       dots.forEach((dot) => {
