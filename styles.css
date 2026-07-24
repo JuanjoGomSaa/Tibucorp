@@ -2771,3 +2771,453 @@ button:focus-visible {
     transition: none;
   }
 }
+
+/* Compact viewport pass */
+.hero-grid.shell {
+  min-height: clamp(600px, calc(100svh - 116px), 700px);
+  gap: clamp(34px, 4vw, 58px);
+  padding-top: clamp(96px, 10svh, 128px);
+  padding-bottom: 34px;
+}
+
+.hero h1 {
+  max-width: 680px;
+  margin: 20px 0 18px;
+  font-size: clamp(48px, 5.1vw, 78px);
+}
+
+.hero-copy > p {
+  max-width: 650px;
+  font-size: clamp(17px, 1.35vw, 22px);
+}
+
+.hero-actions {
+  margin-top: 26px;
+}
+
+.microcopy {
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+.diagnostic-card {
+  max-width: 500px;
+  padding: 28px;
+  border-radius: 24px;
+}
+
+.card-topline,
+.card-caption {
+  margin-bottom: 18px;
+}
+
+.diagnostic-list {
+  gap: 12px;
+}
+
+.diagnostic-list li {
+  min-height: 58px;
+  padding: 14px 16px;
+}
+
+.route-note {
+  margin-top: 22px;
+  padding: 18px 20px;
+}
+
+.metrics-wrap {
+  margin-top: -48px;
+}
+
+.metrics-card {
+  min-height: 96px;
+}
+
+.metrics-card div {
+  padding: 22px 28px;
+}
+
+.audience > .shell,
+.team > .shell {
+  padding: 72px 6%;
+}
+
+.audience .section-heading h2,
+.team .section-heading h2 {
+  font-size: clamp(34px, 3.3vw, 50px);
+}
+
+.audience .section-heading p,
+.team .section-heading p {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.audience-map {
+  width: min(1040px, 100%);
+  min-height: 500px;
+  grid-template-columns: minmax(0, 1fr) 250px minmax(0, 1fr);
+  gap: 28px 50px;
+  margin-top: 38px;
+}
+
+.audience-map::before {
+  inset: 68px calc(50% - 186px);
+}
+
+.audience-map::after {
+  inset: 102px calc(50% - 152px);
+}
+
+.audience-center {
+  width: 220px;
+  height: 220px;
+  padding: 28px;
+}
+
+.audience-ring {
+  inset: -18px;
+}
+
+.audience-ring-dashed {
+  inset: -34px;
+}
+
+.audience-center strong {
+  font-size: clamp(21px, 2vw, 28px);
+}
+
+.audience-center p {
+  font-size: 14px;
+}
+
+.audience-item {
+  min-height: 154px;
+  padding: 20px;
+}
+
+.audience-item span {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 10px;
+}
+
+.audience-item h3 {
+  font-size: 19px;
+}
+
+.audience-item p {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.line-growth,
+.line-review {
+  left: 284px;
+  width: 178px;
+}
+
+.line-family,
+.line-risk {
+  right: 284px;
+  width: 178px;
+}
+
+.line-growth,
+.line-family {
+  top: 150px;
+}
+
+.line-review,
+.line-risk {
+  bottom: 150px;
+}
+
+.team .section-heading h2 {
+  max-width: 780px;
+}
+
+.team .section-heading p {
+  max-width: 660px;
+}
+
+.team-showcase {
+  gap: clamp(34px, 5vw, 66px);
+  margin-top: 38px;
+  grid-template-columns: minmax(300px, 0.8fr) minmax(360px, 1fr);
+}
+
+.team-main-photo {
+  width: min(360px, 100%);
+  aspect-ratio: 4 / 4.5;
+  border-radius: 18px;
+}
+
+.team-thumbs {
+  width: min(350px, 94%);
+  gap: 12px;
+  margin-top: -40px;
+  padding: 12px;
+}
+
+.team-thumb,
+.thumb-avatar {
+  width: 88px;
+}
+
+.thumb-avatar {
+  height: 96px;
+  font-size: 18px;
+}
+
+.team-profile::before {
+  margin-bottom: 20px;
+}
+
+.team-count {
+  margin-bottom: 12px;
+  font-size: clamp(44px, 4.5vw, 70px);
+}
+
+.team-profile h3 {
+  font-size: clamp(32px, 3vw, 48px);
+}
+
+.team-role {
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+.team-description {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.58;
+}
+
+.team-cta {
+  min-height: 44px;
+  margin-top: 22px;
+}
+
+@media (max-width: 1100px) {
+  .hero-grid.shell {
+    padding-top: 104px;
+  }
+
+  .audience > .shell,
+  .team > .shell {
+    padding: 64px 5%;
+  }
+
+  .audience-map {
+    width: min(780px, 100%);
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .audience-center {
+    width: 190px;
+    height: 190px;
+    margin: 2px auto 10px;
+  }
+
+  .audience-item {
+    padding: 18px;
+  }
+
+  .team-showcase {
+    gap: 24px;
+    margin-top: 30px;
+  }
+
+  .team-main-photo {
+    width: min(320px, 100%);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-grid.shell {
+    width: min(100% - 32px, 1480px);
+    gap: 22px;
+    padding-top: 96px;
+    padding-bottom: 34px;
+  }
+
+  .hero h1 {
+    margin-top: 16px;
+    font-size: clamp(36px, 10.5vw, 48px);
+  }
+
+  .hero-copy > p {
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    margin-top: 20px;
+  }
+
+  .microcopy {
+    display: none;
+  }
+
+  .diagnostic-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .card-topline h2 {
+    font-size: 21px;
+  }
+
+  .card-caption,
+  .diagnostic-list li:nth-child(n + 3),
+  .route-note {
+    display: none;
+  }
+
+  .diagnostic-list li {
+    min-height: 52px;
+    padding: 12px 14px;
+  }
+
+  .metrics-wrap {
+    display: none;
+  }
+
+  .audience > .shell,
+  .team > .shell {
+    padding: 52px 20px;
+  }
+
+  .audience .section-heading h2,
+  .team .section-heading h2 {
+    font-size: clamp(29px, 8.4vw, 38px);
+  }
+
+  .audience .section-heading p,
+  .team .section-heading p {
+    font-size: 15px;
+  }
+
+  .audience-map {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .audience-center {
+    width: 126px;
+    height: 126px;
+    margin-bottom: 8px;
+    padding: 16px;
+  }
+
+  .audience-center strong {
+    font-size: 16px;
+  }
+
+  .audience-center a {
+    font-size: 12px;
+  }
+
+  .audience-item,
+  .item-growth,
+  .item-family,
+  .item-review,
+  .item-risk {
+    grid-template-columns: 34px minmax(0, 1fr) 20px;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .audience-item span {
+    width: 34px;
+    height: 34px;
+  }
+
+  .audience-item h3 {
+    font-size: 16px;
+  }
+
+  .audience-item.is-active p {
+    max-height: 120px;
+    margin-top: 10px;
+  }
+
+  .team-showcase {
+    gap: 22px;
+    margin-top: 24px;
+  }
+
+  .team-main-photo {
+    max-width: 280px;
+    aspect-ratio: 4 / 3.6;
+  }
+
+  .team-thumbs {
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 4px;
+  }
+
+  .team-thumb,
+  .thumb-avatar {
+    width: 74px;
+  }
+
+  .thumb-avatar {
+    height: 78px;
+    font-size: 16px;
+  }
+
+  .team-profile::before {
+    margin-bottom: 14px;
+  }
+
+  .team-count {
+    display: none;
+  }
+
+  .team-profile h3 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .team-role {
+    font-size: 16px;
+  }
+
+  .team-description {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-height: 760px) and (min-width: 900px) {
+  .hero-grid.shell {
+    min-height: 560px;
+    padding-top: 88px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 4.6vw, 66px);
+  }
+
+  .diagnostic-card {
+    padding: 22px;
+  }
+
+  .audience > .shell,
+  .team > .shell {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .audience-map {
+    min-height: 450px;
+    margin-top: 26px;
+  }
+
+  .team-showcase {
+    margin-top: 28px;
+  }
+}
