@@ -1034,3 +1034,14 @@
     padding: 16px;
   }
 }
+
+/* Closed service rows show only the summary. */
+.service-accordion-panel {
+  overflow: hidden;
+}
+
+.service-accordion:not(.is-open) .service-accordion-content {
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+}
