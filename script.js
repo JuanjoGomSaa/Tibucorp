@@ -98,6 +98,44 @@ if (audienceMap) {
   updateCenter(null);
 }
 
+const clientsCarousel = document.querySelector("[data-clients-carousel]");
+
+if (clientsCarousel) {
+  const viewport = clientsCarousel.querySelector("[data-clients-viewport]");
+  const track = clientsCarousel.querySelector(".clients-track");
+  const prevButton = clientsCarousel.querySelector("[data-clients-prev]");
+  const nextButton = clientsCarousel.querySelector("[data-clients-next]");
+
+  const getScrollAmount = () => {
+    const firstItem = viewport?.querySelector(".client-logo-item");
+    if (!firstItem) return 260;
+    const styles = track ? window.getComputedStyle(track) : null;
+    const gap = Number.parseFloat(styles?.columnGap || styles?.gap) || 14;
+    return firstItem.getBoundingClientRect().width + gap;
+  };
+
+  const updateButtons = () => {
+    if (!viewport || !prevButton || !nextButton) return;
+    const maxScroll = viewport.scrollWidth - viewport.clientWidth - 2;
+    prevButton.disabled = viewport.scrollLeft <= 2;
+    nextButton.disabled = viewport.scrollLeft >= maxScroll;
+  };
+
+  const scrollClients = (direction) => {
+    if (!viewport) return;
+    viewport.scrollBy({
+      left: getScrollAmount() * direction,
+      behavior: "smooth",
+    });
+  };
+
+  prevButton?.addEventListener("click", () => scrollClients(-1));
+  nextButton?.addEventListener("click", () => scrollClients(1));
+  viewport?.addEventListener("scroll", updateButtons, { passive: true });
+  window.addEventListener("resize", updateButtons);
+  updateButtons();
+}
+
 const teamShowcase = document.querySelector("[data-team-showcase]");
 
 if (teamShowcase) {

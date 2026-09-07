@@ -212,7 +212,7 @@
 
 .slider-progress span {
   display: block;
-  width: 16.666%;
+  width: 14.285%;
   height: 100%;
   background: linear-gradient(90deg, #11c5ff, #16ad62);
   border-radius: inherit;
@@ -791,7 +791,7 @@
 
   .slider-tabs {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(54px, 1fr));
     gap: 8px;
   }
 

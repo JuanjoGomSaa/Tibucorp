@@ -40,6 +40,14 @@ const services = [
     benefits: ["Seguridad jurídica", "Prevención de conflictos", "Continuidad empresarial"],
   },
   {
+    slug: "entidades-sin-animo-de-lucro",
+    tab: "ES",
+    name: "Asesoría - Entidades sin ánimo de lucro",
+    description:
+      "Asesoría tributaria y contable para ESAL, fundaciones, asociaciones y organizaciones sociales en Colombia.",
+    benefits: ["Cumplimiento fiscal y contable", "Gestión transparente", "Sostenibilidad institucional"],
+  },
+  {
     slug: "back-office",
     tab: "BO",
     name: "Back office administrativo",
@@ -113,6 +121,17 @@ accordions.forEach((accordion) => {
   });
 });
 
+const openAccordionFromHash = () => {
+  const slug = decodeURIComponent(window.location.hash.replace("#", ""));
+  const target = slug ? document.getElementById(slug) : null;
+  if (!target?.classList.contains("service-accordion")) return;
+
+  openAccordion(slug);
+};
+
+window.addEventListener("hashchange", openAccordionFromHash);
+openAccordionFromHash();
+
 if (slider) {
   const title = slider.querySelector("[data-slide-title]");
   const description = slider.querySelector("[data-slide-description]");
@@ -137,7 +156,7 @@ if (slider) {
       activeIndex = nextIndex;
       if (title) title.textContent = service.name;
       if (description) description.textContent = service.description;
-      if (counter) counter.textContent = `${String(nextIndex + 1).padStart(2, "0")} / 06`;
+      if (counter) counter.textContent = `${String(nextIndex + 1).padStart(2, "0")} / ${String(services.length).padStart(2, "0")}`;
       if (progress) progress.style.width = `${((nextIndex + 1) / services.length) * 100}%`;
       if (whatsapp) whatsapp.href = makeWhatsappUrl(service.name);
       if (benefits) {
