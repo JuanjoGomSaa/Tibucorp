@@ -67,6 +67,13 @@ a {
   min-width: 0;
 }
 
+.brand-logo {
+  display: block;
+  width: 140px;
+  height: auto;
+  flex: 0 0 auto;
+}
+
 .brand-mark {
   display: grid;
   width: 34px;
@@ -736,6 +743,10 @@ a {
   grid-template-columns: 1.25fr 1fr 1fr 0.72fr;
   gap: 44px;
   padding: 58px 0 42px;
+}
+
+.footer-brand .brand-logo {
+  width: 190px;
 }
 
 .brand.inverted .brand-mark {
